@@ -1,1 +1,1 @@
-# birthday_project
+# Birthday Project
