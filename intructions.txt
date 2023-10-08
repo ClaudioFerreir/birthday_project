@@ -1,0 +1,21 @@
+1. npm init --yes
+2. npm install --save-dev parcel
+3. add no script do package.json
+   "dev": "parcel src/index.html src/styles/main.scss src/scripts/main.js",
+4. npm run dev
+   roda o projeto com o parcel
+5. criamos um arquivo na raiz do projeto para trabalhar as imagens com o parcel
+    sharp.config.json e nele adicionamos
+    {
+      "png": {
+        "quality": 75
+      }
+    }
+6. inicializamos o parcel novamente com 
+    npm run dev
+8. linkamos o arquivo main.scss no index.html
+9. linkamos o arquivo main.js no index.html
+10. criamos o gitignore e adicionamos
+    node_modules
+    dist
+    .parcel-cache
