@@ -1,0 +1,5 @@
+1. Install parcel
+   npm install --save-dev parcel
+2. Run o parcel
+  npm run dev
+  
