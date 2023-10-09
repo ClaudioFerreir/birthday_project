@@ -1,3 +1,5 @@
+@use '../variables';
+
 .button {
   padding: 12px;
   font-size: 18px;
@@ -10,7 +12,7 @@
 
   &--primary {
     color: #fff;
-    background-color: #0000FF;
+    background-color: variables.$blue1;
   }
 
   @media (max-width: 640px) {
