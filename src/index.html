@@ -10,10 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <!--AOS efects-->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!--Custom CSS-->
   <link rel="stylesheet" href="./styles/main.scss">
   <!--AOS Efects JS-->
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <!--Bootstrap JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <!--Custom JS-->
   <script src="./scripts/main.js" defer></script>
 </head>
@@ -35,9 +39,32 @@
               14 de Outubro de 2023 entre às 8h45 e as 12h30 no InFoot
             </li>
           </ul>
-          <a href="#" class="button button--primary">
+          <button type="button" class="button button--primary" data-bs-toggle="modal" data-bs-target="#confirmacao">
             Confirme sua presença
-          </a>
+          </button>
+          <!--Modal-->
+          <div class="modal fade" id="confirmacao" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="confirmacaoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content confirm">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="confirmacaoLabel">Confirmação</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="recipient-name" class="col-form-label">Nome do convidado:</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </p>
     </div>

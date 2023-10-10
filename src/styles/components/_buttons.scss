@@ -1,5 +1,13 @@
 @use '../variables';
 
+button {
+  border: none;
+}
+
+button:hover {
+  opacity: .7;
+}
+
 .button {
   display: flex;
   padding: 12px;

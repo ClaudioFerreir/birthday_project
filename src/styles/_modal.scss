@@ -1,0 +1,9 @@
+@use 'variables';
+
+.confirm {
+  background-color: variables.$green3;
+}
+
+#confirmacaoLabel {
+  font-weight: bold;
+}
