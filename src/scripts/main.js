@@ -13,16 +13,31 @@ const contaAsHoras = setInterval(function() {
   const horasEmMs = 1000 * 60 * 60;
   const minutosEmMs = 1000 * 60;
 
-const diasAteOEvento = Math.floor(distanciaAteOEvento / diasEmMs);
-const horasAteOEvento = Math.floor((distanciaAteOEvento % diasEmMs) / horasEmMs);
-const minutosAteOEvento = Math.floor((distanciaAteOEvento % horasEmMs) / minutosEmMs);
-const segundosAteOEvento = Math.floor((distanciaAteOEvento % minutosEmMs) / 1000);
+  const diasAteOEvento = Math.floor(distanciaAteOEvento / diasEmMs);
+  const horasAteOEvento = Math.floor((distanciaAteOEvento % diasEmMs) / horasEmMs);
+  const minutosAteOEvento = Math.floor((distanciaAteOEvento % horasEmMs) / minutosEmMs);
+  const segundosAteOEvento = Math.floor((distanciaAteOEvento % minutosEmMs) / 1000);
 
-document.getElementById("contador").innerHTML = `começa em <br> ${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
+  document.getElementById("contador").innerHTML = `começa em <br> ${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
 
-if (distanciaAteOEvento < 0) {
-  clearInterval(contaAsHoras);
-  document.getElementById("contador").innerHTML = ` já começou!`;
-}
+  if (distanciaAteOEvento < 0) {
+    clearInterval(contaAsHoras);
+    document.getElementById("contador").innerHTML = ` já começou!`;
+  }
 
 }, 1000)
+
+
+document.getElementById('openModal').addEventListener('click', function() {
+  
+  document.getElementById('guestForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Impede o envio padrão do formulário
+  
+    var nome = document.getElementById('guest-name').value;
+    var mensagem = 'O convidado(a) - ' + nome + ' - confirmou a presença!';
+    var url = 'https://wa.me/5511990038278?text=' + encodeURIComponent(mensagem);
+  
+    // Redireciona o navegador para o link do WhatsApp
+    window.location.href = url;
+  });
+});
