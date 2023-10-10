@@ -28,16 +28,14 @@ const contaAsHoras = setInterval(function() {
 }, 1000)
 
 
-document.getElementById('openModal').addEventListener('click', function() {
-  
-  document.getElementById('guestForm').addEventListener('submit', function (e) {
-    e.preventDefault(); // Impede o envio padrão do formulário
-  
-    var nome = document.getElementById('guest-name').value;
-    var mensagem = 'O convidado(a) - ' + nome + ' - confirmou a presença!';
-    var url = 'https://wa.me/5511990038278?text=' + encodeURIComponent(mensagem);
-  
-    // Redireciona o navegador para o link do WhatsApp
-    window.location.href = url;
-  });
+//enviar confirmação de presença
+
+document.getElementById("btnEnviar").addEventListener("click", function() {
+  var guestName = document.getElementById("guest-name").value;
+  var mensagem = guestName + " confirmou presença no evento!";
+  var codMensagem = encodeURIComponent(mensagem);
+  var url = "https://wa.me/5511990038278?text=" + codMensagem;
+
+  console.log(url);
+  window.location.href = url;
 });
