@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   border-radius: 8px;
+  gap: 20px;
 
   &__infos {
     display: flex;
@@ -29,6 +30,7 @@
 
     &__infos {
       display: block;
+      padding: 0;
 
       &__item {
         margin-bottom: 24px;
