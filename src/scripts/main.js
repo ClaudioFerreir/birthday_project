@@ -36,6 +36,6 @@ document.getElementById("btnEnviar").addEventListener("click", function() {
   var codMensagem = encodeURIComponent(mensagem);
   var url = "https://wa.me/5511990038278?text=" + codMensagem;
 
-  console.log(url);
   window.location.href = url;
+  guestName = "";
 });
