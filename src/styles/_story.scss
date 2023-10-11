@@ -32,7 +32,7 @@
 
   &__image {
     max-width: 360px;
-    min-width: 360px;
+    background-size: cover;
   }
 
   &__details {
@@ -57,10 +57,19 @@
 
     &__image {
       max-width: 100%;
+      background-size: cover;
     }
 
     &__details {
       margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+
+    &__image {
+      max-width: 100%;
+      background-size: cover;
     }
   }
 }

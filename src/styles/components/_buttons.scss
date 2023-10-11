@@ -21,7 +21,7 @@ button:hover {
 
   &--primary {
     color: #fff;
-    background-color: variables.$modalColor;
+    background-color: variables.$buttonColor;
   }
 
   @media (max-width: 640px) {

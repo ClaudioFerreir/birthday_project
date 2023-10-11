@@ -32,7 +32,7 @@ const contaAsHoras = setInterval(function() {
 
 document.getElementById("btnEnviar").addEventListener("click", function() {
   var guestName = document.getElementById("guest-name").value;
-  var mensagem = guestName + " confirmou presença no evento!";
+  var mensagem = guestName + " confirma a presença no evento!";
   var codMensagem = encodeURIComponent(mensagem);
   var url = "https://wa.me/5511990038278?text=" + codMensagem;
 
