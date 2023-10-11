@@ -4,19 +4,19 @@
   padding: 40px 0;
 
   &--parte1 {
-    background-image: linear-gradient(variables.$green1, variables.$green2);
+    background-image: linear-gradient(variables.$backColor1, variables.$backColor2);
   }
 
   &--parte2 {
-    background-image: linear-gradient(variables.$green2, variables.$blue1);
+    background-image: linear-gradient(variables.$backColor2, variables.$backColor3);
   }
 
   &--parte3 {
-    background-image: linear-gradient(variables.$blue1, variables.$blue2);
+    background-image: linear-gradient(variables.$backColor3, variables.$backColor4);
   }
 
   &--parte4 {
-    background-image: linear-gradient(variables.$blue2, variables.$green2);
+    background-image: linear-gradient(variables.$backColor4, variables.$backColor5);
   }
 
   &--image-left {
@@ -32,6 +32,7 @@
 
   &__image {
     max-width: 360px;
+    min-width: 360px;
   }
 
   &__details {

@@ -1,0 +1,16 @@
+@use 'variables';
+
+footer {
+  background-color: rgb(139, 69, 19, .9);
+  
+  .footer {
+    &__description {
+      margin: 0 auto;
+      text-align: center;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
