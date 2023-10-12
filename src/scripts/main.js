@@ -34,7 +34,7 @@ document.getElementById("btnEnviar").addEventListener("click", function() {
   var guestName = document.getElementById("guest-name").value;
   var mensagem = guestName + " confirma a presença no evento!";
   var codMensagem = encodeURIComponent(mensagem);
-  var url = "https://wa.me/5511990038278?text=" + codMensagem;
+  var url = "https://wa.me/351912576077?text=" + codMensagem;
 
   window.location.href = url;
   guestName = "";
